@@ -5,7 +5,7 @@ export const getStudentInfo = async (id) => {
     'https://v1-dot-hust-edu.appspot.com/api/profile/student?sessionId=986B244B-58F9-4E28-B8F3-B4831C2D82A0-1661268931292_1661268931292&token=PLpt91USzRlluCq2duoZ-V2&studentId=' +
     id;
   const a = axios.post(url);
-  return a 
+  return a;
 };
 
 export const searchStudent = async (name) => {
@@ -13,7 +13,7 @@ export const searchStudent = async (name) => {
     'https://v1-dot-hust-edu.appspot.com/api/search/student?sessionId=986B244B-58F9-4E28-B8F3-B4831C2D82A0-1661268931292_1661268931292&token=PLpt91USzRlluCq2duoZ-V2&keyword=' +
     name;
   const a = await axios.get(url);
-  return a
+  return a;
 };
 
 export const convertVietnamese = (str) => {
