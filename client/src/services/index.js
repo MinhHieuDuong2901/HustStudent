@@ -1,17 +1,19 @@
 import axios from 'axios';
 
-export const getStudentInfo = (id) => {
+export const getStudentInfo = async (id) => {
   let url =
     'https://v1-dot-hust-edu.appspot.com/api/profile/student?sessionId=986B244B-58F9-4E28-B8F3-B4831C2D82A0-1661268931292_1661268931292&token=PLpt91USzRlluCq2duoZ-V2&studentId=' +
     id;
-  return axios.post(url);
+  const a = axios.post(url);
+  return a 
 };
 
-export const searchStudent = (name) => {
+export const searchStudent = async (name) => {
   let url =
     'https://v1-dot-hust-edu.appspot.com/api/search/student?sessionId=986B244B-58F9-4E28-B8F3-B4831C2D82A0-1661268931292_1661268931292&token=PLpt91USzRlluCq2duoZ-V2&keyword=' +
     name;
-  return axios.get(url);
+  const a = await axios.get(url);
+  return a
 };
 
 export const convertVietnamese = (str) => {

@@ -6,39 +6,26 @@ import NoData from './components/NoData/NoData';
 import DetailInfo from './components/DetailInfo/DetailInfo';
 import { convertVietnamese, searchStudent } from './services/index';
 
-const getRandomInt = (max, min = 0) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
-
-const searchResult = (query) =>
-  new Array(getRandomInt(5))
-    .join('.')
-    .split('.')
-    .map((_, idx) => {
-      const category = `${convertVietnamese(query)}${idx}`;
+const searchResult = (array) =>{
+  return Array.isArray(array) && array.map((item, idx) => {
       return {
-        value: category,
+        value: `${item.fullName} ${idx}`,
         label: (
           <div
             style={{
               display: 'flex',
               justifyContent: 'space-between',
             }}>
-            <span>
-              Found {convertVietnamese(query)} on{' '}
-              <a
-                href={`https://s.taobao.com/search?q=${convertVietnamese(
-                  query
-                )}`}
-                target='_blank'
-                rel='noopener noreferrer'>
-                {category}
-              </a>
-            </span>
-            <span>{getRandomInt(200, 100)} results</span>
+            <div>
+              {item.fullName}
+            </div>
           </div>
         ),
       };
-    });
+    })
+
+}
+;
 
 function App() {
   const [options, setOptions] = useState([]);
@@ -48,6 +35,18 @@ function App() {
   };
   const onSelect = (value) => {
     console.log('onSelect', value);
+  };
+
+  const onChange = async (data: string) => {
+    data && searchStudent(convertVietnamese(data)).then(deto=>{
+      if(deto.data.status && deto.data.data){
+        const result = searchResult(deto.data.data);
+        setOptions(result)
+      }
+      else {
+        setOptions([]);
+      }
+    })
   };
 
   return (
@@ -61,7 +60,9 @@ function App() {
             }}
             options={options}
             onSelect={onSelect}
-            onSearch={handleSearch}>
+            onSearch={handleSearch}
+            onChange={onChange}
+            >
             <Input.Search
               size='large'
               placeholder='Tên sinh viên hoặc Mã số sinh viên'
