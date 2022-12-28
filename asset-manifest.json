@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/HustStudent/static/css/main.fa6b0fd4.css",
+    "main.js": "/HustStudent/static/js/main.f54d1950.js",
+    "index.html": "/HustStudent/index.html",
+    "main.fa6b0fd4.css.map": "/HustStudent/static/css/main.fa6b0fd4.css.map",
+    "main.f54d1950.js.map": "/HustStudent/static/js/main.f54d1950.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa6b0fd4.css",
+    "static/js/main.f54d1950.js"
+  ]
+}
