@@ -1,0 +1,120 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+
+  .img-container {
+    width: 180px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 12px;
+    // border: 2px solid #1677ff;
+  }
+
+  .info-container {
+    width: 100%;
+    .info-container_content {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      .email {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+        align-items: flex-start;
+        .info-content {
+          margin-left: 0;
+        }
+      }
+      .info-title {
+        font-weight: 400;
+        color: #5b5c5d;
+        font-size: 1rem;
+        min-width: 120px;
+        text-align: justify;
+      }
+      .info-content {
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-left: 8px;
+        text-align: left;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+h1 {
+  text-align: justify;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 2.4rem 0 0.5rem 0;
+  text-transform: uppercase;
+  color: #1677ff;
+}
+.line {
+  width: 90px;
+  height: 4px;
+  background-color: #1677ff;
+  margin: 0.5rem 0;
+}
+
+.timetable-container {
+  width: 100%;
+}
+
+.class-time {
+  display: flex;
+  flex-direction: column;
+  height: 58px;
+  width: 68px;
+  align-items: center;
+  justify-content: center;
+  border-right: #6b6d6e 1px solid;
+  padding-right: 0.5rem;
+}
+
+.class-item {
+  width: 100%;
+  background-color: rgba(84, 150, 232, 0.5);
+  padding: 0.5rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.v-line {
+  width: 1px;
+  height: 12px;
+  background-color: #5b5c5d;
+}
+
+span {
+  font-size: 1rem;
+  color: #5b5c5d;
+}
+
+.class-name {
+  font-size: 1rem;
+  font-weight: 600;
+  word-wrap: break-word;
+  margin: 0 0.5rem;
+}
+
+.class-room {
+  height: 58px;
+  width: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: #6b6d6e 1px solid;
+  padding-left: 0.5rem;
+}
+
+p {
+  margin: 16px 0;
+}
