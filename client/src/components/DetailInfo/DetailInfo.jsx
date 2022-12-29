@@ -73,14 +73,6 @@ const DetailInfo = ({ data }) => {
           ) : (
             <p className='info-content'>Chưa cập nhật</p>
           )}
-          <div className='email'>
-            <a href={'mailto' + data.email} className='info-content'>
-              {data.email}
-            </a>
-            <a href={'mailto' + data.personalEmail} className='info-content'>
-              {data.personalEmail}
-            </a>
-          </div>
         </div>
         <div className='info-container_content'>
           <p className='info-title'>Link CV:</p>
